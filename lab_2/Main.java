@@ -188,13 +188,13 @@ class Plane extends JComponent {
     public void paintComponent(Graphics painter) {
         double s1 = 30 * Main.m1 / (Main.m1 + Main.m2), s2 = 30 * Main.m2 / (Main.m1 + Main.m2);
         painter.setColor(Color.MAGENTA);
-        painter.drawString("явный ментод Эйлера", 20, 20);
+        painter.drawString("полуявный ментод Эйлера-Кромера", 20, 20);
         for (int i = Math.max(1, Main.xs1.size() - 10000); i < Main.xs1.size(); i++) {
             painter.drawLine((int) (Main.x0 + Main.xs1.get(i - 1)), (int) (Main.y0 + Main.ys1.get(i - 1)),
                     (int) (Main.x0 + Main.xs1.get(i)), (int) (Main.y0 + Main.ys1.get(i)));
         }
         painter.setColor(Color.ORANGE);
-        painter.drawString("полуявный ментод Эйлера-Кромера", 20, 40);
+        painter.drawString("явный ментод Эйлера", 20, 40);
         for (int i = Math.max(1, Main.xs1.size() - 10000); i < Main.xs1.size(); i++) {
             painter.drawLine((int) (Main.x0 + Main.xs2.get(i - 1)), (int) (Main.y0 + Main.ys2.get(i - 1)),
                     (int) (Main.x0 + Main.xs2.get(i)), (int) (Main.y0 + Main.ys2.get(i)));
